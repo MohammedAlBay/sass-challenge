@@ -96,25 +96,30 @@ body {
     margin-bottom: 0px;
   }
   
-  .message,
-  .success,
-  .error,
-  .warning {
+  // defining placeholder class and @extend to .message, .success, .error, .warning
+  %message-shared {
     border: 1px solid #ccc;
     padding: $padding;
     margin: 16px;
     color: #2748b3;
+  }
+
+  .message {
+    @extend %message-shared;
     background-color: #000;
   }
   
   .success {
+    @extend %message-shared;
     background-color: green;
   }
   
   .error {
+    @extend %message-shared;
     background-color: red;
   }
   
   .warning {
+    @extend %message-shared;
     background-color: orange;
   }
